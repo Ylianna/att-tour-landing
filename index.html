@@ -1,13 +1,307 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>att-test</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Экскурсия: Тысячелетний Брест и Брестская крепость</title>
+</head>
+
+<body class="page">
+
+  <header class="header">
+    <div class="header__container container">
+      <a href="#" class="header__logo-link">
+        <img src="/src/assets/logo 1.svg" alt="Логотип" class="header__logo">
+      </a>
+  
+      <nav class="header__menu" id="mobile-menu">
+        <ul class="header__list">
+          <li class="header__item"><a href="#" class="header__link header__link--active">Программа</a></li>
+          <li class="header__item"><a href="#schedule-section" class="header__link" id="to-schedule">Расписание</a></li>
+          <li class="header__item"><a href="#" class="header__link">Отзывы</a></li>
+          <li class="header__item"><a href="#" class="header__link header__link--dropdown">Контакты</a> <img src="/src/assets/ArrowDown.svg" class="header__icon--dropdown"></li>
+        </ul>
+      </nav>
+  
+      <div class="header__right">
+        <div class="header__actions">
+          <div class="header__select header__select--currency">BYN <img src="/src/assets/icon.svg" alt="Логотип"
+              class="header__select--icon"></div>
+          <div class="header__select header__select--lang">РУС <img src="/src/assets/icon.svg" alt="Логотип"
+              class="header__select--icon"></div>
+          <a href="#" class="header__btn-book">БРОНИРОВАТЬ</a>
+        </div>
+      
+        <button class="header__burger" id="burger-btn" aria-label="Открыть меню">
+          <img src="/src/assets/burger_icon.svg" alt="Меню" class="header__burger-icon">
+        </button>
+      </div>
+    </div>
+  </header>
+  
+  <main class="main">
+    <section class="promo">
+      <div class="promo__container container">
+        <div class="promo__content">
+          <h1 class="promo__title">Экскурсия<br/>Тысячелетний Брест и<br>Брестская крепость</h1>
+          <p class="promo__desc">Погрузитесь в историю наследия заповедной памяти</p>
+  
+          <div class="promo__actions">
+            <a href="#schedule-section" class="promo__btn-schedule">РАСПИСАНИЕ</a>
+            <div class="promo__scroll-arrow">
+              <img src="/src/assets/arrow-header.svg" alt="Логотип" class="header__logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="schedule" id="schedule-section">
+    <div class="schedule__container container">
+  
+      <div class="schedule__header">
+        <h2 class="schedule__title">Расписание экскурсии <br/> Тысячелетний Брест и Брестская крепость</h2>
+      </div>
+  
+      <form class="schedule__form filter-form" id="filter-form">
+        <div class="filter-form__field">
+          <label for="date-from" class="filter-form__label">Дата с</label>
+          <div class="filter-form__input-wrapper">
+            <input type="text" id="date-from" class="filter-form__input" placeholder="ДД.ММ.ГГГГ">
+            <span class="filter-form__icon filter-form__icon--calendar"></span>
+          </div>
+        </div>
+  
+        <div class="filter-form__field">
+          <label for="date-to" class="filter-form__label">Дата по</label>
+          <div class="filter-form__input-wrapper">
+            <input type="text" id="date-to" class="filter-form__input" placeholder="ДД.ММ.ГГГГ">
+            <span class="filter-form__icon filter-form__icon--calendar"></span>
+          </div>
+        </div>
+  
+        <div class="filter-form__field">
+          <label for="adults-count" class="filter-form__label">Кол-во взрослых</label>
+          <select id="adults-count" class="filter-form__select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+  
+        <div class="filter-form__field">
+          <label for="children-count" class="filter-form__label">Кол-во детей</label>
+          <select id="children-count" class="filter-form__select">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div class="filter-form__field">
+          <button type="submit" class="filter-form__btn">Поиск</button>
+        </div>
+      </form>
+  
+      <div class="schedule__grid">
+        <div class="tour-card tour-card--disabled" data-type="group">
+          <div class="tour-card__header">
+            <div class="tour-card__meta">
+              <span class="tour-card__date">18.05.2026 (чт.)</span>
+              <span class="tour-card__time">Начало: 18:00 — 4 ч. 15 мин.</span>
+            </div>
+            <span class="tour-card__price">60.00 BYN / 55.00 BYN</span>
+          </div>
+          <div class="tour-card__footer">
+            <span class="tour-card__status tour-card__status--empty">Нет мест</span>
+          </div>
+        </div>
+  
+        <div class="tour-card" data-type="group">
+          <div class="tour-card__header">
+            <div class="tour-card__meta">
+              <span class="tour-card__date">25.06.2026 (вт.)</span>
+              <span class="tour-card__time">Начало: 18:00 — 4 ч. 15 мин.</span>
+            </div>
+            <span class="tour-card__price">60.00 BYN / 55.00 BYN</span>
+          </div>
+          <div class="tour-card__footer">
+            <span class="tour-card__status">Осталось мест: 2</span>
+            <button class="tour-card__btn">Бронировать</button>
+          </div>
+        </div>
+  
+        <div class="tour-card" data-type="group">
+          <div class="tour-card__header">
+            <div class="tour-card__meta">
+              <span class="tour-card__date">25.06.2026 (вт.)</span>
+              <span class="tour-card__time">Начало: 18:00 — 4 ч. 15 мин.</span>
+            </div>
+            <span class="tour-card__price">60.00 BYN / 55.00 BYN</span>
+          </div>
+          <div class="tour-card__footer">
+            <span class="tour-card__status">Осталось мест: 2</span>
+            <button class="tour-card__btn">Бронировать</button>
+          </div>
+        </div>
+  
+        <div class="tour-card" data-type="private">
+          <div class="tour-card__header">
+            <div class="tour-card__meta">
+              <span class="tour-card__date">25.06.2026 (вт.)</span>
+              <span class="tour-card__time">Начало: 18:00 — 4 ч. 15 мин.</span>
+            </div>
+            <span class="tour-card__price">60.00 BYN / 55.00 BYN</span>
+          </div>
+          <div class="tour-card__footer">
+            <span class="tour-card__status">Осталось мест: 2</span>
+            <button class="tour-card__btn">Бронировать</button>
+          </div>
+        </div>
+  
+        <div class="tour-card" data-type="private">
+          <div class="tour-card__header">
+            <div class="tour-card__meta">
+              <span class="tour-card__date">25.06.2026 (вт.)</span>
+              <span class="tour-card__time">Начало: 18:00 — 4 ч. 15 мин.</span>
+            </div>
+            <span class="tour-card__price">60.00 BYN / 55.00 BYN</span>
+          </div>
+          <div class="tour-card__footer">
+            <span class="tour-card__status">Осталось мест: 2</span>
+            <button class="tour-card__btn">Бронировать</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+    <section class="reviews">
+      <div class="reviews__container container">
+        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+    
+        <div class="reviews__slider slider">
+          <div class="slider__track" id="slider-track">
+            <div class="slider__item">
+              <div class="review-item">
+                <img src="/src/assets/Rectangle 14.svg" alt="Аватар" class="review-item__avatar">
+                <div class="review-item__content">
+                  <div class="review-item__meta">
+                    <h4 class="review-item__user">Марина, <span class="review-item__city">Санкт-Петербург</span></h4>
+                    <span class="review-item__date">11-Июня-2026</span>
+                  </div>
+                  <div class="review-item__block-rating">
+                  <img src="/src/assets/rating-icon.svg" alt="Рейтинг" class="review-item__rating">
+                  </div>
+                  <p class="review-item__text">
+                    Поездка очень понравилась! Усадьба Огинского, которого знают все, но о нем знают меньше. Быт белорусской
+                    усадьбы атмосфере. Три очень интересных костела, православный храм. Гид Юрий рассказывал интересно, видна
+                    любовь к родному краю, что всегда вдохновляет. Три очень интересных костела, православный храм. Ги... <span
+                      class="review-item__more">далее...</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="slider__item">
+              <div class="review-item">
+                <img src="/src/assets/Rectangle 14.svg" alt="Аватар" class="review-item__avatar">
+                <div class="review-item__content">
+                  <div class="review-item__meta">
+                    <h4 class="review-item__user">Марина, <span class="review-item__city">Санкт-Петербург</span></h4>
+                    <span class="review-item__date">11-Июня-2026</span>
+                  </div>
+                  <img src="/src/assets/rating-icon.svg" alt="Рейтинг" class="review-item__rating">
+                  <p class="review-item__text">
+                    Поездка очень понравилась! Усадьба Огинского, которого знают все, но о нем знают меньше. Быт белорусской
+                    усадьбы атмосфере. Три очень интересных костела, православный храм.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="slider__item">
+              <div class="review-item">
+                <img src="/src/assets/Rectangle 14.svg" alt="Аватар" class="review-item__avatar">
+                <div class="review-item__content">
+                  <div class="review-item__meta">
+                    <h4 class="review-item__user">Марина, <span class="review-item__city">Санкт-Петербург</span></h4>
+                    <span class="review-item__date">11-Июня-2026</span>
+                  </div>
+                  <img src="/src/assets/rating-icon.svg" alt="Рейтинг" class="review-item__rating">
+                  <p class="review-item__text">
+                    Поездка очень понравилась! Усадьба Огинского, которого знают все, но о нем знают меньше. Быт белорусской
+                    усадьбы атмосфере. Три очень интересных костела, православный храм.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+    
+          <div class="slider__nav">
+            <button class="slider__btn slider__btn--prev" id="slide-prev" aria-label="Назад">❮</button>
+            <button class="slider__btn slider__btn--next" id="slide-next" aria-label="Вперед">❯</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="footer__container container">
+    <div class="footer__top">
+      <div class="footer__contacts">
+        <img src="/src/assets/logo_footer.svg" alt="Ekskursii.by" class="footer__logo">
+        <h4 class="footer__title">КОНТАКТЫ</h4>
+        
+        <div class="footer__phones">
+          <a href="tel:+375173944913" class="footer__phone-link">
+            <img src="/src/assets/icons--phone.svg" alt="Телефон" class="footer__icon-phone">
+            +375 17 394-49-13
+          </a>
+          <a href="tel:+375297566665" class="footer__phone-link">
+            <img src="/src/assets/icons--phone.svg" alt="Телефон" class="footer__icon-phone">
+            +375 29 756-66-65
+          </a>
+        </div>
+
+        <div class="footer__socials">
+          <a href="#" class="footer__social-item" aria-label="WhatsApp">
+            <img src="/src/assets/WhatsApp.svg" alt="WhatsApp">
+          </a>
+          <a href="#" class="footer__social-item" aria-label="Telegram">
+            <img src="/src/assets/Telegram.svg" alt="Telegram">
+          </a>
+          <a href="#" class="footer__social-item" aria-label="Viber">
+            <img src="/src/assets/Viber.svg" alt="Viber">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <p class="footer__legal-bold">
+          &copy; Частное научно-производственное унитарное предприятие<br>
+          "Автоматизированные технологии туризма"
+        </p>
+        <p class="footer__legal-text">
+          Свидетельство о регистрации №1808 от 9.08.2007 выдано Минским горисполкомом. УНП: 190855081 Сертификат соответствия туристических услуг СТБ № BY/112 04.03. 071.01 00099 выдан Национальным агентством по туризму РБ, действителен до 22.10.2029 г.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2007-2026 Частное научно-производственное унитарное предприятие "Автоматизированные технологии туризма"</p>
+    </div>
+
+  </div>
+</footer>
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
